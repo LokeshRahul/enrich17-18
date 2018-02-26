@@ -1,8 +1,17 @@
 #include<stdio.h>
-#include<stdlib.n>
 int main()
 {
-   int n,temp;
+   int n,temp,no;
    scanf("%d",&n);
-   
+   temp=n;
+   while(temp>0)
+   {
+      if(temp%2==1)
+      {
+        no+=1;
+      }
+      temp/=2;
+   }
+   printf("%d",no);
+   return 0;
 }
