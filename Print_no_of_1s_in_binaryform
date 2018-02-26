@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-   int n,temp,no;
+   int n,temp,no=0;
    scanf("%d",&n);
    temp=n;
    while(temp>0)
    {
       if(temp%2==1)
       {
-        no+=1;
+        no++;
       }
       temp/=2;
    }
