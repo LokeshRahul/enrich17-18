@@ -5,8 +5,8 @@ int main()
    scanf("%d",&n);
    temp=n;
    while(temp>0)
-   {
-      if(temp%2==1)
+   {  
+      if(temp & 1)
       {
         no++;
       }
