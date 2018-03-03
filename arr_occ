@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+class num()
+{  public:
+    int value,found=0,occ[5];
+}
+int main() 
+{
+  num arr[10];
+  int s=10;
+  int i;
+  for(i=0;i<s;i++)
+  {
+      scanf("%d",&arr.value[i]);
+  }
+  for(i=0;(i<s)&&(arr.found[i]==0);i++)
+  {   arr.occ=0;
+      for(int j=0;j<s;j++)
+      {
+          if(arr.value[i]==arr.value[j]) 
+          {
+              arr.occ++;
+              arr.found++;
+          }
+          printf("\n %d\t[ ",i);
+          for(int j=0;j<s;j++) printf(" %d ",arr.occ[i][j]);
+          printf(" ]");
+      }
+  }
+  return 0;
+}
