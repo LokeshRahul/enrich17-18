@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main()
+{
+	int i,j,n,term=0;
+	float mf,det=1,arr[10][10];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	for(j=0;j<n;j++)
+	{
+		scanf("%f",&arr[i][j]);
+	}
+	for(i=1;i<n;i++)
+	{
+		if(arr[i][term]<0) mf=(arr[i][term])/(arr[term][term]);
+		else mf=-(arr[i][term])/(arr[term][term]);
+		for(j=0;j<n;j++)
+		{   
+			arr[i][j]+=mf*arr[term][j];
+			if((j==n-1)&&(term<i-1))
+			{
+				term++;
+				if(arr[i][term]<0) mf=(arr[i][term])/(arr[term][term]);
+				else mf=-(arr[i][term])/(arr[term][term]);
+				j=term;
+			}
+		}
+		term=0;
+    }
+	for(i=0;i<n;i++)
+	{
+		det*=arr[i][i];	
+	}
+	printf("%0.1f",det);
+	return 0;
+}
