@@ -11,9 +11,11 @@ int main()
 	}
 	int a[n][n],r,c,t=1;
 	for(r=0;r<n;r++)
-	for(c=0;c<n;c++)
 	{
-		a[r][c]=0;
+		for(c=0;c<n;c++)
+		{
+			a[r][c]=0;
+		}
 	}
 	r=0;
 	c=(n/2);
@@ -27,14 +29,26 @@ int main()
 		{
 			r+=2;
 			c-=1;
-			if(c<0)		c=n+c;
-			if(r>n-1)	r=r-n;
+			if(c<0)		
+			{
+				c=n+c;
+			}
+			if(r>n-1)	
+			{
+				r=r-n;
+			}
 			a[r][c]=t;
 		}
 		r-=1;
 		c+=1;
-		if(r<0)		r=n+r;
-		if(c>n-1)	c=c-n;
+		if(r<0)
+		{
+			r=n+r;
+		}
+		if(c>n-1)
+		{
+			c=c-n;
+		}
 		t++;
 	}
 	for(r=0;r<n;r++)
