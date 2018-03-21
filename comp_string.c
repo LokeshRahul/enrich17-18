@@ -23,6 +23,6 @@ int main()
 		 comp_s[++j]=s[i];
 	}
 	comp_s[j]='\0';
-    printf("%s",comp_s);
+    	printf("%s",comp_s);
 	return 0;
 }
