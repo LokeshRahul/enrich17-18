@@ -15,11 +15,8 @@ int main()
 		 	rep++;
 		 	continue;
 		 }
-		 if(rep>1)
-		 {           
-		 	comp_s[++j]=rep+'0';
-		 	rep=1;
-		 }
+		 comp_s[++j]=rep+'0';
+		 rep=1;
 		 comp_s[++j]=s[i];
 	}
 	comp_s[j]='\0';
